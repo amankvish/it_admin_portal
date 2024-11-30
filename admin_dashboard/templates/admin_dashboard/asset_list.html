@@ -1,0 +1,26 @@
+{% extends "admin_dashboard/base.html" %}
+{% block title %}Assets{% endblock %}
+{% block content %}
+<h2>Asset List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Asset Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for asset in assets %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ asset.name }}</td>
+            <td>{{ asset.description }}</td>
+            <td>{{ asset.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'dashboard_view' %}" class="btn">Back to Dashboard</a>
+{% endblock %}

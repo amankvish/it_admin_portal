@@ -1,0 +1,13 @@
+{% extends "admin_dashboard/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2>Dashboard</h2>
+    <p>Select a module to manage.</p>
+    <div class="flex">
+        <a href="{% url 'employee_list' %}" class="btn">Manage Employees</a>
+        <a href="{% url 'asset_list' %}" class="btn">Manage Assets</a>
+        <a href="{% url 'assign_asset' %}" class="btn">Assign Assets</a>
+    </div>
+</div>
+{% endblock %}
